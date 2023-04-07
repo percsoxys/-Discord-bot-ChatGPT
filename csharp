@@ -1,0 +1,7 @@
+client.on('message', async message => {
+  if (message.author.bot) return;
+
+  const response = await generateText(message.content);
+
+  message.channel.send(response);
+});
